@@ -29,7 +29,10 @@ function App() {
       </header>
       <div>
          <input value={postcode} onChange={(e) => setPostcode(e.target.value)} onKeyPress={(e)=> {
-           e.code === 'Enter' && setSearch(postcode)
+           if (e.code === 'Enter' ) {
+            setPage(0)
+            setSearch(postcode)
+           }
          }} />
          <div>{search !== '' && items.length === 0 && <span>No more results</span>}</div>
         <table>
