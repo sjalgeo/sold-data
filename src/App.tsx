@@ -28,6 +28,7 @@ function App() {
         Fake Mouse Price
       </header>
       <div>
+        <div>Postcodes need spaces for now</div>
          <input value={postcode} onChange={(e) => setPostcode(e.target.value)} onKeyPress={(e)=> {
            if (e.code === 'Enter' ) {
             setPage(0)
